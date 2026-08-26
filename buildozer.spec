@@ -20,7 +20,7 @@ version = 1.0.0
 
 # (list) Application requirements
 # NOTE: Use 'pygame' (not 'pygame-ce') - python-for-android only has a recipe for 'pygame'
-requirements = python3==3.11.9,pygame
+requirements = hostpython3==3.11.9,python3==3.11.9,pygame
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait
