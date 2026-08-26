@@ -15,12 +15,12 @@ source.dir = .
 # (list) Source files to include (let empty to include all the files)
 source.include_exts = py,png,jpg,kv,atlas,ttf,wav,mp3,ogg
 
-# (str) Application versionaing (method 1)
+# (str) Application versioning (method 1)
 version = 1.0.0
 
 # (list) Application requirements
 # NOTE: Use 'pygame' (not 'pygame-ce') - python-for-android only has a recipe for 'pygame'
-requirements = python3,pygame
+requirements = python3==3.11.9,pygame
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait
@@ -38,7 +38,7 @@ android.api = 33
 android.minapi = 21
 
 # (str) Android NDK version to use
-# android.ndk = 25b
+android.ndk = 25b
 
 # (list) The Android archs to build for
 # Build only arm64-v8a for faster builds and modern device support
