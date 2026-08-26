@@ -15,12 +15,12 @@ source.dir = .
 # (list) Source files to include (let empty to include all the files)
 source.include_exts = py,png,jpg,kv,atlas,ttf,wav,mp3,ogg
 
-# (str) Application versioning (method 1)
+# (str) Application versionaing (method 1)
 version = 1.0.0
 
 # (list) Application requirements
-# comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,pygame-ce
+# NOTE: Use 'pygame' (not 'pygame-ce') - python-for-android only has a recipe for 'pygame'
+requirements = python3,pygame
 
 # (str) Supported orientation (one of landscape, sensorLandscape, portrait or all)
 orientation = portrait
@@ -29,7 +29,7 @@ orientation = portrait
 fullscreen = 1
 
 # (list) Permissions
-# (str) android.permissions = INTERNET
+# android.permissions = INTERNET
 
 # (int) Target Android API, should be as high as possible.
 android.api = 33
@@ -40,23 +40,21 @@ android.minapi = 21
 # (str) Android NDK version to use
 # android.ndk = 25b
 
+# (list) The Android archs to build for
+# Build only arm64-v8a for faster builds and modern device support
+android.archs = arm64-v8a
+
 # (bool) Use --private data storage (True) or --dir public storage (False)
 # android.private_storage = True
 
 # (str) Android logcat filters to use
 android.logcat_filters = *:S python:D
 
-# (list) List of javac options to add
-# android.add_javac_options = -Xlint:unchecked
-
-# (list) Android additionnal libraries to copy into libs/armeabi
-# android.add_libs_armeabi = libs/armeabi/liba.so
-
 # (bool) Enable Android auto backup
 android.allow_backup = True
 
 # (str) Format to use where packaging ("apk" or "aab")
-package = apk
+# android.release_artifact = apk
 
 [buildozer]
 
